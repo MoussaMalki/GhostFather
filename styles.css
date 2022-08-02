@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#Map {
+  position: absolute;
+  height: 600px;
+  width: 300px;
+  border: 4px solid #b76719;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 50px;
+  background-image: url(images/backgroundGame.gif);
+}
+#mainCharacter {
+    height: 40px ;
+    width: 40px;
+   
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+#mainCharacter img{
+ 
+    width: 100%;
+   
+}
+#blocks {
+    position: absolute;
+    left: -2px;
+    top: 100px;
+}
+#blocks img{
+    width: 100px;
+}
+#oneBlock {
+    position: absolute;
+    left: 268px;
+    top: 45px;
+}
+
+#oneBlock img {
+    width: 25px;
+  
+}
+
+#trapsBlocks {
+    position: absolute;
+    left: 192px;
+    top: 200px;
+}
+#trapsBlocks img{
+    width: 100px;
+}
+#trapsTringles {
+    position: absolute;
+    left: 192px;
+    top: 178px;
+    display: none;
+}
+#trapsTringles img{
+    width: 100px;
+}
+#trapsTringles2 {
+    position: absolute;
+    left: 2px;
+    top: 492px;
+    display: none;
+}
+#trapsTringles2 img{
+    width: 60px;
+}
+#shooter {
+    position: absolute;
+    left: -2px;
+    top: 300px;
+}
+
+#shooter img {
+    width: 25px;
+  
+}
+
+#canon {
+    position: absolute;
+    left: 1px;
+    top: 283px;
+}
+
+#canon img {
+    width: 25px;
+  
+}
+
+#bullet {
+    position: absolute;
+    left: 24px;
+    top: 285px;
+}
+
+#bullet img {
+    width: 15px;
+  
+}
+#normalBlocks {
+    position: absolute;
+    left: 192px;
+    top: 420px;
+}
+#normalBlocks img{
+    width: 100px;
+}
+
+#bot {
+    position: absolute;
+    left: 230px;
+    top: 562px;
+}
+
+#bot img {
+    width: 25px;
+  
+}
+
+#lastBlock {
+    position: absolute;
+    left: -2px;
+    top: 510px;
+}
+
+#lastBlock img {
+    width: 65px;
+  
+}
+#hearts {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+     right: 0;
+     top: -40px;
+}
+#hearts img{
+    width: 2rem;
+}
+#doors {
+    position: absolute;
+    left: -5px;
+    top: 547px;
+}
+#doors img {
+    width: 3rem;
+}
+#losing {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+   top: 30%;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   left: 50%;
+   transform: translate(-50%, 0);
+   box-shadow: 0 5px 9px 2px #a18fbc;
+   border-radius: 15px;
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+
+}
+#losing a{
+background-color: black;
+color: #fff;
+padding: 5px 25px;
+border-radius: 50px;
+margin-top: 20px;
+text-decoration: none;
+font-weight: 400;
+}
+#wining {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+   top: 30%;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   left: 50%;
+   transform: translate(-50%, 0);
+   box-shadow: 0 5px 9px 2px #a18fbc;
+   border-radius: 15px;
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+
+}
+#wining a{
+background-color: black;
+color: #fff;
+padding: 5px 25px;
+border-radius: 50px;
+margin-top: 20px;
+text-decoration: none;
+font-weight: 400;
+}

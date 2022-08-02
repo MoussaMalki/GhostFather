@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghost-Father</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="Map">
+      <div
+        id="mainCharacter"
+        moving="no"
+        stopDown="no"
+        stopRight="no"
+        stopUp="no"
+        traped="no"
+      >
+        <img src="images/mainChara.png" alt="" class="charaPic" />
+      </div>
+
+      <div id="hearts">
+        <div><img src="images/heart.png" alt="" class="heart" /></div>
+        <div><img src="images/heart.png" alt="" class="heart" /></div>
+        <div><img src="images/heart.png" alt="" class="heart" /></div>
+      </div>
+      <div id="blocks">
+        <img src="images/blocks.png" alt="" />
+      </div>
+      <div id="oneBlock">
+        <img src="images/oneBlock.png" alt="" />
+      </div>
+      <div id="trapsBlocks">
+        <img src="images/trapsBefore.png" alt="" />
+      </div>
+      <div id="trapsTringles">
+        <img src="images/spears.png" alt="" class="spearsImg" out="no" />
+      </div>
+      <div id="trapsTringles2">
+        <img src="images/spears2.png" alt="" class="spearsImg2" out="no" />
+      </div>
+
+      <div id="canon">
+        <img src="images/canon.png" alt="" />
+      </div>
+      <div id="shooter">
+        <img src="images/oneBlock.png" alt="" />
+      </div>
+
+      <div id="bullet">
+        <img src="images/bullet.png" alt="" />
+      </div>
+      <div id="normalBlocks">
+        <img src="images/trapsBefore.png" alt="" />
+      </div>
+      <div id="bot" go="goU">
+        <img src="images/pacman.gif" alt="" />
+      </div>
+      <div id="lastBlock">
+        <img src="images/lastBlocks.png" alt="" />
+      </div>
+      <div id="doors">
+        <img src="images/doors1.png" alt="" class="door" />
+      </div>
+      <div id="losing">
+        <h2>Game Over</h2>
+        <a href="" class="restartBtn">Restart</a>
+      </div>
+      <div id="wining">
+        <h2>You Have Won</h2>
+        <a href="" class="restartBtn">Restart</a>
+      </div>
+    </div>
+
+    <hr />
+    <script src="game.js"></script>
+  </body>
+</html>
