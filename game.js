@@ -19,6 +19,10 @@ setTimeout(() => {
   mainCharacter.style.top = `-1px`;
 }, 10);
 
+setTimeout(() => {
+  window.characterTop = 0;
+}, 1);
+
 window.addEventListener(`keydown`, (e) => {
   window.characterTop = parseInt(
     getComputedStyle(mainCharacter).getPropertyValue("top")
@@ -196,6 +200,9 @@ window.addEventListener(`keydown`, (e) => {
     mainCharacter.setAttribute(`stopLeft`, `no`);
 
     if (getComputedStyle(mainCharacter).getPropertyValue("top") === `-1px`) {
+      mainCharacter.setAttribute(`stopUp`, `yes`);
+    }
+    if (getComputedStyle(mainCharacter).getPropertyValue("top") === `0px`) {
       mainCharacter.setAttribute(`stopUp`, `yes`);
     }
     if (
@@ -393,21 +400,6 @@ function traps() {
 
 traps();
 
-function traps2() {
-  let spears2 = doc.querySelector(`#trapsTringles2`);
-  let spearsImg2 = doc.querySelector(`.spearsImg2`);
-
-  setInterval(() => {
-    if (characterLeft === 0 && characterTop === 478) {
-      setTimeout(() => {
-        spears2.style.display = `initial`;
-        spears2.setAttribute(`out`, `yes`);
-      }, 500);
-    }
-  }, 100);
-}
-traps2();
-
 // ===> moving bullet
 
 function movingBullet() {
@@ -489,19 +481,19 @@ function firstTrap() {
           doc.querySelectorAll(`.heart`)[0].style.display = `none`;
           setTimeout(() => {
             heartAcc = 1;
-          }, 1000);
+          }, 10);
         }
         if (heartAcc === 1) {
           doc.querySelectorAll(`.heart`)[1].style.display = `none`;
           setTimeout(() => {
             heartAcc = 2;
-          }, 1000);
+          }, 10);
         }
         if (heartAcc === 2) {
           doc.querySelectorAll(`.heart`)[2].style.display = `none`;
           setTimeout(() => {
             heartAcc = 3;
-          }, 1000);
+          }, 10);
         }
       }
     }
@@ -519,19 +511,19 @@ function firstTrap() {
           doc.querySelectorAll(`.heart`)[0].style.display = `none`;
           setTimeout(() => {
             heartAcc = 1;
-          }, 1000);
+          }, 10);
         }
         if (heartAcc === 1) {
           doc.querySelectorAll(`.heart`)[1].style.display = `none`;
           setTimeout(() => {
             heartAcc = 2;
-          }, 1000);
+          }, 10);
         }
         if (heartAcc === 2) {
           doc.querySelectorAll(`.heart`)[2].style.display = `none`;
           setTimeout(() => {
             heartAcc = 3;
-          }, 1000);
+          }, 10);
         }
       }
     }
@@ -555,19 +547,19 @@ function secondTrap() {
             doc.querySelectorAll(`.heart`)[0].style.display = `none`;
             setTimeout(() => {
               heartAcc = 1;
-            }, 1000);
+            }, 10);
           }
           if (heartAcc === 1) {
             doc.querySelectorAll(`.heart`)[1].style.display = `none`;
             setTimeout(() => {
               heartAcc = 2;
-            }, 1000);
+            }, 10);
           }
           if (heartAcc === 2) {
             doc.querySelectorAll(`.heart`)[2].style.display = `none`;
             setTimeout(() => {
               heartAcc = 3;
-            }, 1000);
+            }, 10);
           }
         }
       }
@@ -593,19 +585,19 @@ function thirdTrap() {
             doc.querySelectorAll(`.heart`)[0].style.display = `none`;
             setTimeout(() => {
               heartAcc = 1;
-            }, 1000);
+            }, 10);
           }
           if (heartAcc === 1) {
             doc.querySelectorAll(`.heart`)[1].style.display = `none`;
             setTimeout(() => {
               heartAcc = 2;
-            }, 1000);
+            }, 10);
           }
           if (heartAcc === 2) {
             doc.querySelectorAll(`.heart`)[2].style.display = `none`;
             setTimeout(() => {
               heartAcc = 3;
-            }, 1000);
+            }, 10);
           }
         }
       }
@@ -625,19 +617,19 @@ function thirdTrap() {
             doc.querySelectorAll(`.heart`)[0].style.display = `none`;
             setTimeout(() => {
               heartAcc = 1;
-            }, 1000);
+            }, 10);
           }
           if (heartAcc === 1) {
             doc.querySelectorAll(`.heart`)[1].style.display = `none`;
             setTimeout(() => {
               heartAcc = 2;
-            }, 1000);
+            }, 10);
           }
           if (heartAcc === 2) {
             doc.querySelectorAll(`.heart`)[2].style.display = `none`;
             setTimeout(() => {
               heartAcc = 3;
-            }, 1000);
+            }, 10);
           }
         }
       }
@@ -645,48 +637,6 @@ function thirdTrap() {
   }, 1);
 }
 thirdTrap();
-
-function forthTrap() {
-  setInterval(() => {
-    if (characterTop === 478 && characterLeft >= 0 && characterLeft < 65) {
-      setTimeout(() => {
-        mainCharacter.style.top = `0px`;
-        mainCharacter.style.left = `0px`;
-        characterLeft = 0;
-        characterTop = 0;
-        mainCharacter.setAttribute(`lost`, `yes`);
-        mainCharacter.setAttribute(`stopRight`, `no`);
-
-        if (heartAcc === 0) {
-          doc.querySelectorAll(`.heart`)[0].style.display = `none`;
-          setTimeout(() => {
-            heartAcc = 1;
-          }, 1000);
-        }
-        if (heartAcc === 1) {
-          doc.querySelectorAll(`.heart`)[1].style.display = `none`;
-          setTimeout(() => {
-            heartAcc = 2;
-          }, 1000);
-        }
-        if (heartAcc === 2) {
-          doc.querySelectorAll(`.heart`)[2].style.display = `none`;
-          setTimeout(() => {
-            heartAcc = 3;
-          }, 1000);
-        }
-
-        setTimeout(() => {
-          mainCharacter.setAttribute(`stopDown`, `no`);
-          mainCharacter.setAttribute(`stopLeft`, `no`);
-          mainCharacter.setAttribute(`lost`, `no`);
-          doc.querySelector(`#trapsTringles2`).style.display = `none`;
-        }, 300);
-      }, 500);
-    }
-  }, 1);
-}
-forthTrap();
 
 function doorOpening() {
   let door = doc.querySelector(`.door`);
@@ -742,12 +692,3 @@ function winingPopUp() {
   }, 50);
 }
 winingPopUp();
-
-setInterval(() => {
-  if (characterTop < 0 || characterTop > 560) {
-    location.reload();
-  }
-  if (characterLeft < 0 || characterLeft > 260) {
-    location.reload();
-  }
-}, 50);
